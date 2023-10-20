@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primaryContainer"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="8dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/fake_user"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNamaUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:text="Nama"
+                />
+
+            <TextView
+                android:id="@+id/txtTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondry"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:text="July 04 2022"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/secondry"/>
+
+    <TextView
+        android:id="@+id/txtComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content nama"
+        android:textColor="@color/white"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/primaryContainer"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraSmall"
+    app:contentPadding="16dp"
+    app:strokeWidth="0dp"
+    android:layout_marginBottom="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+        <ImageView
+            android:id="@+id/imgMilestone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/fake_user"
+/></com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:text="Memorize all n5 kanji"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:layout_marginStart="16dp"
+                />
+
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:textColor="@color/secondry"
+                android:text="Memorize all n5 kanji"
+
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:layout_marginStart="16dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

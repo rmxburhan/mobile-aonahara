@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shapeAppearance="?attr/shapeAppearanceCornerExtraSmall"
+    android:id="@+id/container"
+    app:cardBackgroundColor="@color/primaryContainer"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:text="Class Is Postponed"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBodyMedium"
+                    android:text="Datyukianesa, August 04, 14:00 JST "
+                    android:textColor="@color/secondry"/>
+
+
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"
+                >
+
+                <ImageView
+                    android:id="@+id/imgTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/fake_user"/>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="8dp"
+            android:background="@color/secondry"/>
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:text="Class Is Postponed"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

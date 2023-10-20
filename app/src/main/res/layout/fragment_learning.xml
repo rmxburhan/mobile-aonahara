@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:background="@color/primary"
+    android:layout_height="match_parent"
+    tools:context=".ui.learning.LearningFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/headlineClassResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:text="Class resources"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_information"
+        app:layout_constraintLeft_toRightOf="@id/headlineClassResources"
+        app:layout_constraintTop_toTopOf="@id/headlineClassResources"
+        app:layout_constraintBottom_toBottomOf="@id/headlineClassResources"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listClassResource"
+        android:layout_marginRight="16dp"
+        android:text="SHOW MORE"
+        android:textColor="@color/onPrimaryContainer"
+        android:textAppearance="?attr/textAppearanceBodyLarge"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listClassResource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:listitem="@layout/item_classresource"
+        app:layout_constraintTop_toBottomOf="@id/headlineClassResources"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        />
+
+    <TextView
+        android:id="@+id/actionShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listClassResource"
+        android:layout_marginRight="16dp"
+        android:text="SHOW MORE"
+        android:textColor="@color/onPrimaryContainer"
+        android:textAppearance="?attr/textAppearanceBodyLarge"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/headlineTeacherPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Teacher Post's"
+        android:textAppearance="?attr/textAppearanceBodyLarge"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/actionShowMore" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_information"
+        app:layout_constraintLeft_toRightOf="@id/headlineTeacherPost"
+        app:layout_constraintTop_toTopOf="@id/headlineTeacherPost"
+        app:layout_constraintBottom_toBottomOf="@id/headlineTeacherPost"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listPosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headlineTeacherPost"
+        tools:listitem="@layout/item_post"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

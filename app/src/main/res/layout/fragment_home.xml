@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/primary"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                style="@style/Widget.Material3.CardView.Elevated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/primaryContainer"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="?attr/shapeAppearanceCornerExtraSmall"
+                app:strokeColor="@color/primaryContainer"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="NEXT CLASS START IN"
+                                android:textColor="@color/white"
+                                android:textSize="24dp" />
+
+                            <TextView
+                                android:id="@+id/txtTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textColor="@color/white"
+                                android:textSize="22sp" />
+
+
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            app:shapeAppearance="?attr/shapeAppearanceCornerExtraLarge">
+
+                            <ImageView
+                                android:id="@+id/imgUser"
+                                android:layout_width="64dp"
+                                android:layout_height="63dp"
+                                android:src="@drawable/ic_launcher_background" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listMyClass"
+                        android:layout_width="match_parent"
+                        android:scrollbars="vertical"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_height="wrap_content"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_marginHorizontal="16dp"/>
+                    <TextView
+                        android:id="@+id/actionExpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="EXPAND"
+                        android:layout_marginHorizontal="16dp"
+                        android:textColor="@color/onPrimaryContainer"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Announcements"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listAnnounce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:listitem="@layout/item_announcements"
+                app:layout_constraintTop_toBottomOf="@id/textview4"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                />
+
+            <TextView
+                android:id="@+id/textVIew1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Milestones"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/listAnnounce" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listMilestone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textVIew1"
+                tools:listitem="@layout/item_milestones"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

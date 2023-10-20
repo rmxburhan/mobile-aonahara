@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/primaryContainer"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:cardCornerRadius="100dp">
+
+            <ImageView
+                android:id="@+id/imgTeacher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/fake_user"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtTeacherName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Teacher"
+                android:textAppearance="?textAppearanceBodyLarge"/>
+
+            <TextView
+                android:id="@+id/txtTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Topic "
+                android:textAppearance="?textAppearanceBodyLarge"/>
+            <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Time"
+            android:textAppearance="?textAppearanceBodyLarge"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
